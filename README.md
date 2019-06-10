@@ -27,7 +27,7 @@ or this
             Sent at: 00:07
 
 ## How to use
-
+NOTE: You'll need to be running python 3.6+ for this to work, as my code uses f-strings, which weren't introduced until python 3.6. If you refuse to update, you can modify the two or three lines of codes that use f-strings easily.
 ### Setup
 In the event that there is ever demand for this decorator, I will look into adding this project to PyPI.  In the meantime, you'll want to do the following:
 
@@ -35,14 +35,19 @@ In the event that there is ever demand for this decorator, I will look into addi
 ```bash
 git clone https://github.com/jrodal98/sms-decorator.git
 ```
-2) Copy `sms_decorator.py` and `config.py` into any project you want to use the decorator in.
-3) Setup a free twilio account [here](https://www.twilio.com/)
-4) Setup the config.py file (skeleton provided).  It should include the following:
+2) Install dependencies doing something like this:
+```bash
+cd sms-decorator
+pip3 install -r requirements.txt
+```
+3) Copy `sms_decorator.py` and `config.py` into any project you want to use the decorator in.
+4) Setup a free twilio account [here](https://www.twilio.com/)
+5) Setup the config.py file (skeleton provided).  It should include the following:
     1) Your account SID
     2) Your auth token
     3) Your twilio number
     4) Your cellphone number
-5) import `sms_decorator as sms_decorator` into the file you desire.  You might need to import it differently depending on the structure of your project. (Left as an exercise to the reader)
+6) import `sms_decorator as sms_decorator` into the file you desire.  You might need to import it differently depending on the structure of your project. (Left as an exercise to the reader)
 I recommend running `test.py` to verify that everything is setup properly.
 
 ### Usage
